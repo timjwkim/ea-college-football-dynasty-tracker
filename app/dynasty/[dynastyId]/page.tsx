@@ -3,7 +3,7 @@ import sql from '@/lib/db';
 import { addTeamToDynasty, removeTeamFromDynasty } from '@/lib/actions';
 
 type Props = {
-  params: { dynastyId: string };
+  params: Promise<{ dynastyId: string }>;
 };
 
 export default async function DynastyPage({ params }: Props) {
